@@ -44,7 +44,10 @@ if(cost<50000){
 }
 console.log("---------------------------------------");
 // Question number 4
-
+// For this queston we have 3 options of status student, faculty and others
+// and for each status we have 3 other options of number of books, these 3 
+// options of have thier own duration of time. So this could be done using 
+// nested if condtion or logical expressions.
 let status=prompt("Enter the status of the borrower");
 let numBooks=+prompt("Enter number of books which are overdue");
 if(status==="student"){
@@ -74,6 +77,10 @@ if(status==="student"){
 }
 console.log("----------------------------------------");
 // Question number 5
+// we have 3 types of ages and each types have two options of 
+// summer or fall, or winter or spring options and this two options
+// of seasons have their own result of bed time output. This can
+// be calculated using nested if or logical expression too.
 
 let age=prompt("Enter children age");
 let season=prompt("Enter one of the four seasons");
