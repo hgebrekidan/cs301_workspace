@@ -76,7 +76,7 @@ if(status==="student"){
     }else{
         console.log("Loan duration will be: 2 weeks");
     }
-}else if(status===faculty){
+}else if(status==="faculty"){
     if(numBooks===0){
         console.log("Loan duration will be: 12 weeks");
     }else if(numBooks<3){
