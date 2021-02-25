@@ -66,8 +66,8 @@ console.log("---------------------------------------");
 // status       |  compare status with student, faculty or others       |time in weeks
 // numberOfBooks|  compare 3 options of number of books with each status|
 
-let status=prompt("Enter the status of the borrower");
-let numBooks=+prompt("Enter number of books which are overdue");
+let status=prompt("Enter the status of the borrower: ");
+let numBooks=+prompt("Enter number of books which are overdue: ");
 if(status==="student"){
     if(numBooks===0){
         console.log("Loan duration will be: 6 weeks");
@@ -105,8 +105,8 @@ console.log("----------------------------------------");
 //         |  if((age<5)&&(weather==winter||weather===spring))  | bed time |
 // season  |  similar logical expression for age<=12 and age>12 | bed time |
 
-let age=prompt("Enter children age");
-let season=prompt("Enter one of the four seasons");
+let age=prompt("Enter children age: ");
+let season=prompt("Enter one of the four seasons: ");
 if(age<=5){
     if(season==="summer"||season==="fall"){
         console.log("Child's bed time will be: 8:30PM");
