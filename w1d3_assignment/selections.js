@@ -29,6 +29,21 @@ if(completedCredits<30){
 else{
     console.log("The student is: "+studentName+" and he/she is a Senior.");
 }
+// An other method for question number 2
+let studentName=prompt("Enter student's name: ");
+let completedCredits=prompt("Enter number of completed credits: ");
+let status="";
+if(completedCredits<30){
+    status=("The student is: "+studentName+" and he/she is a Freshman.");
+}else if(completedCredits>=30&&completedCredits<60){
+    status=("The student is: "+studentName+" and he/she is a Sophomore.");
+}else if(completedCredits>=60&&completedCredits<90){
+    status=("The student is: "+studentName+" and he/she is a Junior.");
+}
+else{
+    status=("The student is: "+studentName+" and he/she is a Senior.");
+}
+console.log(status);
 console.log("-------------------------------------");
 // Question number 3
 
