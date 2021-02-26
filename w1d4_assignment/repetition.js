@@ -108,11 +108,20 @@ for(i=1;i<=5;i++){
  */
 // Part two
 
-for(let i=1;i<=5;i++){
-    for(let j=1;j<=i;j++){
-        console.log(i);
-    }
-}
+for(i=1;i<=5;i++){
+    let k="";
+     for (j=1;j<=i;j++){ 
+        k=k+j;
+     }
+     console.log(k);
+ } 
+   /*
+    1
+    12
+    123
+    1234
+    12345
+   */
 // Part three
 
 for(i=5;i>=1;i--){
