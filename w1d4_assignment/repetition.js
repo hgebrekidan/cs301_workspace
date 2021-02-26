@@ -12,7 +12,7 @@ for(let i=2; i<=number;i++){
     console.log(" : is not a prime number.")
 }
 // Using break 
-let num=prompt("Enter the number");
+let num=+prompt("Enter the number");
 let j=2;
 counter=0;
 let prime="";
@@ -79,7 +79,7 @@ for (let i = 1; i <= fibNumber; i++) {
 
 // Question number 5
 // Sum of all digits of a number
-let prompt=require('prompt-sync')();
+
 let value=prompt("Enter the number");
 let sum = 0;
 while (value) {
@@ -90,12 +90,22 @@ while (value) {
 console.log(sum);
 // Question number 6
 // Part one
- 
-for(let i=1;i<=5;i++){
-    for(let j=1;j<=i;j++){
-        console.log(i)
-    }
-}
+
+
+for(i=1;i<=5;i++){
+    let k="";
+     for (j=i;j>=1;j--){ 
+        k=k+i;
+     }
+     console.log(k);
+ } 
+ /*
+ 1
+ 22
+ 333
+ 4444
+ 55555
+ */
 // Part two
 
 for(let i=1;i<=5;i++){
@@ -105,8 +115,16 @@ for(let i=1;i<=5;i++){
 }
 // Part three
 
-for(let i=5;i>=1;i--){
-    for(let j=1;j<=i;j++){
-        console.log(j);
-    }
-}
+for(i=5;i>=1;i--){
+    let k="";
+     for (j=i;j>=1;j--){ 
+        k=k+i;
+     }
+     console.log(k);
+ } /*
+    55555
+    4444
+    333
+    22
+    1
+ */
