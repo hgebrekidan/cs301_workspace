@@ -40,4 +40,73 @@ console.log(result);
 
 // Question number 3
 
+let prompt=require('prompt-sync')();
 
+const PIN=1212;
+let count=0;
+for(let i=0;i<3;i++){
+    let inputPin=+prompt("Enter the pin number : ");
+    if(inputPin!==PIN){
+        if(count===3){
+            break;
+        } 
+        console.log("Incorrect, try again");
+        count++;
+        continue;
+    }else{
+        console.log("correct, Welcome back");
+        break;
+    }
+}if(count===3){
+    console.log("Sorry, but you have been locked out");
+}
+// Question number 4
+// Fibbonacci Series
+const fibNumber = prompt("Enter the number of terms: ");
+let n1 = 0;
+let n2 = 1;
+let nextNumber;
+
+console.log("The Fibonacci Series will be: ");
+
+for (let i = 1; i <= fibNumber; i++) {
+    console.log(n1);
+    nextNumber = n1 + n2;
+    n1 = n2;
+    n2 = nextNumber;
+    
+}
+
+// Question number 5
+// Sum of all digits of a number
+let prompt=require('prompt-sync')();
+let value=prompt("Enter the number");
+let sum = 0;
+while (value) {
+    sum += value % 10;
+    value = Math.floor(value / 10);
+}
+
+console.log(sum);
+// Question number 6
+// Part one
+ 
+for(let i=1;i<=5;i++){
+    for(let j=1;j<=i;j++){
+        console.log(i)
+    }
+}
+// Part two
+
+for(let i=1;i<=5;i++){
+    for(let j=1;j<=i;j++){
+        console.log(i);
+    }
+}
+// Part three
+
+for(let i=5;i>=1;i--){
+    for(let j=1;j<=i;j++){
+        console.log(j);
+    }
+}
