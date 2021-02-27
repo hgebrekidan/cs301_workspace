@@ -1,0 +1,9 @@
+W1d5 Assignment
+1. What are alternatives to default parameters? 
+- default parameter might be zero, empty string or empty parameter
+- parameters without defaults after default parameters
+- destructed parameter with default value assignment 
+2. What are things you should consider while naming a function?
+- different name from a reserved name
+- meaning full function name
+- use camelback typing 
