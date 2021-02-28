@@ -39,29 +39,27 @@ console.log(result);
 
 //Question number 3
 
-let prompt = require("prompt-sync")();
-let sweep = prompt("Enter sweep of the house :");
-let height = prompt("Enter height of the house:");
-height = parseFloat(height);
-let width = prompt("Enter width of the house :");
-width = parseFloat(width);
-let depth = prompt("Enter the depth of the house :");
-depth = parseFloat(depth);
-
-function houseVolume(w, d, h, sw) {
- return roofVolume(w, sw, d) + livingVolume(w, h, d);
+//let prompt=require('prompt-sync')();
+let width=prompt('Enter the width : ');
+let depth=prompt('Enter the depth : ');
+let height=prompt('Enter the height : ');
+let sweep=prompt('Enter the sweep : ');
+function houseVolume(w,h,d,s){
+let volume=livingVolume(w,h,d)+roofVolume(d,s,w);
+return volume;
 }
-function livingVolume(w, h, d) {
- return w * h * d;
+console.log("Total volume of the house is: "+houseVolume(width,height,depth,sweep));
+function livingVolume(w,h,d){
+let volume=w*h*d;
+return volume;
 }
-function roofVolume(w, sw, d) {
- return triangleArea(w, sw) * d;
+function roofVolume(d,s,w){
+let volume=d*triangleArea(s,w);
+return volume;
 }
-function triangleArea(w, sw) {
- let s = (w + 2 * sw) / 2;
- let x = (s - w) * (s - sw) * (s - sw);
- return Math.sqrt(s * x);
+function triangleArea(s,w){
+let tringelHeight=Math.sqrt((s*s)-((w/2)*(w/2)));
+let area=(0.5*tringelHeight*w)*2;
+return area;
 }
-console.log("house volume is :" + houseVolume(width, depth, height, sweep));
-//console.log("house volume is :" + houseVolume());
 
