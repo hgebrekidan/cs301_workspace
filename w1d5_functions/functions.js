@@ -1,9 +1,9 @@
+"use strict";
 // Question number 1
 // Prime number or not
 let count=0;
 
 function checkPrime(num=0){
-    
     for(let i=2; i<=num;i++){
         if(num%i===0){
             count++;
@@ -23,7 +23,7 @@ let number=prompt("Enter number : ");
 // Area of circle
 
 let radius=prompt("Enter the radius of the circle : ");
-let height=prompt("Enter the height of the cylinder : ");
+let hight=prompt("Enter the height of the cylinder : ");
 function areaOfCircle(r=0){
      let circleArea=(Math.PI*r*r)/2;
     return circleArea;
@@ -34,16 +34,16 @@ function volumeOfCylinder(r=0,h=0){
     let cylinderVolume=areaOfCircle(r)*h;
     return cylinderVolume;
 }
-let result=volumeOfCylinder(radius,height);
+let result=volumeOfCylinder(radius,hight);
 console.log(result);
 
 //Question number 3
 
 //let prompt=require('prompt-sync')();
-let width=prompt('Enter the width : ');
-let depth=prompt('Enter the depth : ');
-let height=prompt('Enter the height : ');
-let sweep=prompt('Enter the sweep : ');
+let width=+prompt('Enter the width : ');
+let depth=+prompt('Enter the depth : ');
+let height=+prompt('Enter the height : ');
+let sweep=+prompt('Enter the sweep : ');
 function houseVolume(w,h,d,s){
 let volume=livingVolume(w,h,d)+roofVolume(d,s,w);
 return volume;
