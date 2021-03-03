@@ -1,6 +1,10 @@
 w1d3 Assignment 
 1.  What happens when you forget a break while using switch statement?
-if we forget putting break while we are using break the next case after the current case will be executed and if it satisfies the case the output will be over written and we will get the out put of the next case which means the wrong solution. However this condition works if we are not forgetting to put break on purpose otherwise we will get the intended result.
+if we forget putting break while we are using break the next case after 
+the current case will be executed and if it satisfies the case the output 
+will be over written and we will get the out put of the the current and next case which means
+ the wrong solution. However this condition works if we are not forgetting to 
+ put break on purpose otherwise we will get the intended result.
 2. What will be the output of running following code?
 var foo = 0;
 switch (foo) {
@@ -18,5 +22,5 @@ switch (foo) {
  default:
  console.log('default');   // nothing will be printed.
 }
-3. Will output change if value of foo is a ‘0’ (0 in quotes) instead?
+3. Will output change if value of foo is a ï¿½0ï¿½ (0 in quotes) instead?
 still nothing will be printed out.

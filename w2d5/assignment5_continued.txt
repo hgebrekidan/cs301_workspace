@@ -1,0 +1,16 @@
+w2d2_assignment 5_continued
+
+3. Do functions need to be always commented? Write your understanding based on the reading.
+ - No, if we are using arrow function we can use with out comment
+
+4. When to choose Function Declaration versus Function Expression?
+ - When a function is one line statement its better to use function declaration
+5. Function are values in JavaScript. They can be assigned, copied, or declared in any place of the
+code. Is this a true or a false statement? Support your answer with examples.
+ - It is true statement because since function always return values we can assign, copy or declare that
+   value (function). For example if we are trying to make a program which checks the odd or even type of
+   a number first and last digits of that number. In this case we can use two functions for reversing the 
+   the number and checking the odd or even type. Therefore we can call reverseDigit function in to odd or
+   even function. The called function return number so that we can do our calculation to know whether the
+   number is even or odd. 
+ 
