@@ -4,6 +4,12 @@
 let prompt = require("prompt-sync")();
 let firstNumber = prompt("Enter the first number : ");
 let secondNumber = prompt("Enter the second number : ");
+/**
+ * 
+ * @param {number} num1 first number to be tested for highest common factor
+ * @param {number} num2 second number to be tested for highest common factor
+ * @return{number} highest common factor
+ */
 let HCF = function (num1, num2) {
     let higestCommonFactor;
     for (let i = 1; i < num1 && i < num2; i++) {
@@ -18,31 +24,15 @@ let HCF = function (num1, num2) {
 console.log(`${HCF(firstNumber, secondNumber)} is the HCF of  ${firstNumber} and ${secondNumber}`);
 // Question number 6
 // LCM of two numbers
-let LCM = function (num1, num2) {
+/**
+ * 
+ * @param {number} num1 first number to be tested for lowest common multiple
+ * @param {number} num2 second number to be tested for lowest common multiple
+ * @return{number} lowest common multiple
+ */
+ let LCM = function (num1, num2) {
     let lcm = (num1 * num2) / HCF(num1, num2);
     return lcm;
 };
 console.log(`${LCM(firstNumber, secondNumber)} is the LCM of ${firstNumber} and ${secondNumber}`);
-// Question number 7
-// Function expression
-let addExp=function (result) {
-    return (`Result of the computation is ${result}`);
-    };
-    
-let compute=function (add,num1,num2){
-    let sum=num1+num2;
-    add(sum);
-    
-};
-compute(addExp,5,5);
-// Anonymous function
-
-// Arrow function
-let addArrow= (result)=> {
-    return (`Result of the computation is ${result}`);
-    };
-    let computeArrow=function (add,num1,num2){
-        let sum=num1+num2;
-        addArrow(sum);
-    };
-computeArrow(addArrow,5,5);
+module.exports= {HCF,LCM};
