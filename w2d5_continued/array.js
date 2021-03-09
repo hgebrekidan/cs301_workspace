@@ -91,6 +91,71 @@ function rotateRightByNTimes(array, num) {
     return array;
 }
 console.log(rotateRightByNTimes([1, 2, 3, 4, 5], 2));
+/**
+ * 
+ * @param {*} array 
+ */
+function isBalanced(array) {
+    if(array.length%2!==0) return false;
+    let stack = [];
+    for (let i = 0; i < array.length; i++) {
+        // if opening braces push
+        if (array[i] == "(" || array[i] == "[" || array[i] == "{") {
+            stack.push(array[i]);
+            continue;
+        }
+
+        // if it a closing brace and nothing to match with it's not balanced.
+        if (stack.length === 0) return false;
+
+        let opn = stack.pop();
+
+        // if opening and closing pairs not matching it's not balanced.
+        switch (array[i]) {
+            case ")":
+                if (opn === "{" || opn === "[") return false;
+                break;
+            case "}":
+                if (opn === "(" || opn === "[") return false;
+                break;
+            case "]":
+                if (opn === "(" || opn === "{") return false;
+                break;
+        }
+    }
+
+    // if there are extra closing brackets not balanced.
+    return (stack.length === 0);
+}
+
+console.log(isBalanced(['(','{','}','[',']',')',')']));
+/**
+ * 
+ * @param {*} array 
+ */
+function checkBalance(array){
+    if(array.length%2!==0) return false;
+    let stack=[];
+    for(let i=0;i<array.length;i++){
+        if(array[i]=='('||array[i]=='['||array[i]=='{'){
+            stack.push(array[i]);
+            continue;
+        }
+
+        if(stack.length===0) return false;
+
+        if(array[i]===')'&&stack.pop()==='{'||array[i]===')'&&stack.pop()==='['){
+            return false;
+        }else if(array[i]===']'&&stack.pop()==='{'||array[i]===')'&&stack.pop()==='('){
+            return false;
+        }else if(array[i]==='}'&&stack.pop()==='('||array[i]===')'&&stack.pop()==='['){
+            return false;
+        }
+        
+    }
+    return true;
+}
+console.log(checkBalance(['(','{','}','[',']',')']));
 
 // Question number 10
 // searches for a number in an array and returns 
@@ -123,7 +188,7 @@ function enhanced(array, num) {
 console.log(enhanced([4, 1, 2, 4, 4, 2, 4, 3, 6], 4));
 
 
-// Question number 12
+// Question number 11
 // reversing an array
 /**
  * 
@@ -141,6 +206,35 @@ function reversedArray(array) {
     return reversedNumbers;
 }
 console.log(reversedArray([1, 2, 3, 4, 5]));
+// Question number 12
+// filter out negative values
+let prompt=require("prompt-sync")();
+let numbers;
+let array=[];
+while(5===5){
+    numbers=+prompt("Enter the numbers");
+    if(numbers===-999){
+        break;
+    }
+    array.push(numbers);
+}
+console.log(array);/**
+ * 
+ * @param {number} arr array to searched for negative values
+ * @return {number}  
+ */
+function filterNegatives(arr){
+let negativeValues=[];
+for(let i=0;i<array.length;i++){
+    if(array[i]<0){
+        negativeValues.push(array[i]);
+    }
+}
+return (negativeValues);
+}
+console.log(filterNegatives(array));
+
+
 // Question number 13 
 // search for numbers >=a and <=b  in an array
 /**
@@ -163,5 +257,27 @@ function filterRange(array, num1, num2) {
     return arrayOfValues;
 }
 console.log(filterRange([1, 2, 3, 4, 5, 9, 7, 10], 7, 2));
+
+// Question number 14
+// find strings which are palindromes in an array of strings
+/**
+ * 
+ * @param {String} array given array of Strings
+ * @return {String} an array of palindrome Strings
+ */
+function palindromeStrings(array) {
+    let arrayPalindrome = [];
+    for (let i = 0; i < array.length; i++) {
+
+        if (array[i].charAt(i) === array[i].charAt(array[i].length - 1 - i)) {
+            arrayPalindrome[arrayPalindrome.length] = array[i];
+        }
+
+    }
+    return arrayPalindrome;
+
+}
+
+console.log(palindromeStrings(["bed", "dad", "madam", "boby", "isisi"]));
 
 module.exports = { isEqual, addFirstAndEnd, getMiddle, rotateToLeftByOne, rotateToRightByOne, rotateRightByNTimes };
