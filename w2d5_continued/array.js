@@ -93,7 +93,8 @@ function rotateRightByNTimes(array, num) {
 console.log(rotateRightByNTimes([1, 2, 3, 4, 5], 2));
 /**
  * 
- * @param {*} array 
+ * @param {String} array array of signs
+ * @return {number} true if balanced
  */
 function isBalanced(array) {
     if(array.length%2!==0) return false;
@@ -128,34 +129,35 @@ function isBalanced(array) {
     return (stack.length === 0);
 }
 
-console.log(isBalanced(['(','{','}','[',']',')',')']));
+console.log(isBalanced(["(","{","}","[","]",")",")"]));
 /**
  * 
- * @param {*} array 
+ * @param {String} array array of signs to be checked
+ * @return {number} true if balanced
  */
 function checkBalance(array){
     if(array.length%2!==0) return false;
     let stack=[];
     for(let i=0;i<array.length;i++){
-        if(array[i]=='('||array[i]=='['||array[i]=='{'){
+        if(array[i]=="("||array[i]=="["||array[i]=="{"){
             stack.push(array[i]);
             continue;
         }
 
         if(stack.length===0) return false;
 
-        if(array[i]===')'&&stack.pop()==='{'||array[i]===')'&&stack.pop()==='['){
+        if(array[i]===")"&&stack.pop()==="{"||array[i]===")"&&stack.pop()==="["){
             return false;
-        }else if(array[i]===']'&&stack.pop()==='{'||array[i]===')'&&stack.pop()==='('){
+        }else if(array[i]==="]"&&stack.pop()==="{"||array[i]===")"&&stack.pop()==="("){
             return false;
-        }else if(array[i]==='}'&&stack.pop()==='('||array[i]===')'&&stack.pop()==='['){
+        }else if(array[i]==="}"&&stack.pop()==="("||array[i]===")"&&stack.pop()==="["){
             return false;
         }
         
     }
     return true;
 }
-console.log(checkBalance(['(','{','}','[',']',')']));
+console.log(checkBalance(["(","{","}","[","]",")"]));
 
 // Question number 10
 // searches for a number in an array and returns 
@@ -211,7 +213,7 @@ console.log(reversedArray([1, 2, 3, 4, 5]));
 let prompt=require("prompt-sync")();
 let numbers;
 let array=[];
-while(5===5){
+while(true){
     numbers=+prompt("Enter the numbers");
     if(numbers===-999){
         break;
@@ -221,7 +223,7 @@ while(5===5){
 console.log(array);/**
  * 
  * @param {number} arr array to searched for negative values
- * @return {number}  
+ * @return {number}  negative values
  */
 function filterNegatives(arr){
 let negativeValues=[];
@@ -279,5 +281,25 @@ function palindromeStrings(array) {
 }
 
 console.log(palindromeStrings(["bed", "dad", "madam", "boby", "isisi"]));
+
+// Question number 15
+/**
+ * 
+ * @param {number} array1 first matrix to be added
+ * @param {number} array2 second matrix to added
+ * @return {number} sum
+ */
+function enhancedMatrix(array1, array2) {
+    let result=[];
+        for (let i = 0; i < array1.length; i++) {
+            let row=[];
+            for (let j = 0; j < array1[i].length; j++) {
+                row[row.length]=array1[i][j]+array2[i][j];
+            }
+            result[result.length]=row;
+        }
+        return result;
+    }
+    console.log(enhancedMatrix([[4, 1, 2], [4, 4, 2]], [[4, 3, 6],[2,4,3]]));
 
 module.exports = { isEqual, addFirstAndEnd, getMiddle, rotateToLeftByOne, rotateToRightByOne, rotateRightByNTimes };

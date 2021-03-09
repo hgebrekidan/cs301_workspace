@@ -1,4 +1,4 @@
- 
+ w3d1 Objects and Strings
 1. How can you make a copy of an object?
 - By referencing to the same value that the object is referencing. For example :
 let obj1=car={year: 2019} and if we want to copy obj1 , we can do:
