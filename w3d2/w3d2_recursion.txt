@@ -1,0 +1,7 @@
+w3d2 Recursion
+1. calculate the power of any base
+We will have a variable power which can multiply our base number as many times as it. Our base case will be where this power reaches zero and it gives 1, any positive integer number decrement by one to reach to the base case and negatives would increment by one to reach there. Therefor for positive integers we multiply our base with the recursive formula of power decrement by one, one the other hand for the negative integer power we divide 1 by our base and multiply by recursive formula which power has decrement of one.
+2. count the digits of a given number
+The base case would be when the number reaches at less than 1. On the recursive formula our number will be changed to modulus of 10 with out any decimal point. On each step the number would decrease by one digit and add one count each time. Finally we will get total count of the digit.
+3. reverse a given string. 
+We have a base case of when the given string is equal to empty string and it gives 0. On the recursive formula we cut the last character of the string and concatinate each of them while the string decreases by one character at a time. Finally we will get the reversed string of the given string. 
