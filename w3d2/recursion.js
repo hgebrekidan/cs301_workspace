@@ -28,6 +28,7 @@ console.log(powerOfAnyBase(2,-3));
  */
 function recursiveDigitCount(num){
     //let quotient=;
+    num=Math.abs(num);
     if(num<1){
         return 0;
     }
