@@ -1,3 +1,4 @@
+/*eslint-disable*/
 //Question number 1
 
 let prompt=require('prompt-sync')();
