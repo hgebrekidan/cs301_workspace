@@ -82,14 +82,20 @@ console.log(suffix("glowing","blowing"));
  * @param {String} str String to be checked
  * @return {String} String starting with capital letter
  */ 
-function firstLetterCapital(str){
-    // let firstCapital=str.substring(0,1);
-    // firstCapital=firstCapital.toUpperCase();
-    let firstCapital=str.charAt(0).toUpperCase();
-    let rest=str.substring(1,str.length);
-    return firstCapital+rest;
+function firstLetterCapital(str) {
+    str = str.split(" ");
+    let first = "";
+    let rest = "";
+    let newStr=" ";
+    for (let i = 0; i < str.length; i++) {
+        first=str[i].charAt(0).toUpperCase();
+        rest=str[i].substring(1,str[i].length);
+        newStr+= first + rest +" ";
+
+    }
+    return newStr;
 }
-console.log(firstLetterCapital("america"));
+console.log(firstLetterCapital("america is in the west side of the world"));
 // Question number 6
 /**
  * 
@@ -108,15 +114,15 @@ console.log(swap(8,9));
 // Question number 7
 /**
  * 
- * @param {object} array array of objects
+ * @param {object} users array of objects
  * @return {number} average age
  */
-function avgAge(array){
+function avgAge(users){
     let sum=0;
-    for (let i=0;i<array.length;i++){
-        sum+=array[i].age;
+    for (let user of users){
+        sum+=user.age;
     } 
-    let avg=sum/array.length
+    let avg=sum/users.length;
     return avg;
 }
 console.log(avgAge([bob={nme:"b",age:24},tom={name:"t",age:20}]));
