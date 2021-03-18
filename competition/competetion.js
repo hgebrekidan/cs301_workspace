@@ -1,4 +1,4 @@
-"eslint-disable";
+
 // Qn no. 1
 function divisibleSumPairs( array,num){
     count=0;
@@ -35,28 +35,18 @@ function mostRepeatedElement(array) {
 }
 console.log("Most repeated element: "+mostRepeatedElement([1, 2, 3, 2, 2, 2, 1, 4, 5, 1, 2, 3, 1]));
 // Qn no.3 
-function countSocksPairs(array){
-    let colorAndNums=[];
-    let newArray=[];
-    let color;
-    let count=1;
-    for(let i=0;i<array.length;i++){
-        for(let j=i+1;j<array.length;j++){
-            if(array[i]===array[j]&&newArray.indexOf(array[i]===-1)){
-                count++;
-                newArray.push(array[i]);
-            }
-            
+function countSocksPairs(arr)
+ 
+for(let i=0; i< arr.length; i++){
+    for (let j= i+1; j<arr.length){
+        if (arr[i]===arr[j]){
+            count=1;
+            count++
+            break;
         }
-        count=Math.floor(count/2);
-        pairs.push(count,color);
-        colorAndNums.push(pairs);
     }
-    return colorAndNums;
 }
-
-console.log(countSocksPairs([1,2,1,1,2,3,4,3,5]));
-
+console.log(countSocksPairs([10,2,3,4,5,10,4]))
 //Qn no.5
 
 function computeCharges(arr) {
