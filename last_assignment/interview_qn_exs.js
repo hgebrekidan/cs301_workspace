@@ -265,4 +265,38 @@ console.log(indexOfTarget([1, 2, 3, 4, 6], 5));
  }
  console.log(moveZeroes([0,2,0,6,0,5,0]));
 
- //16. 
+//16. Write a function that takes a string as input and reverse 
+// only the vowels of a string.
+function reverseVowelsOnly(str) {
+    str = str.split("");
+    let revStr = [];
+    let vowels = [];
+    for (let i = 0; i < str.length; i++) {                             
+        if (isVowel(str[i])) {
+            vowels[vowels.length]=(str[i]);
+        } else if (!isVowel(str[i])) {
+            revStr[i] = (str[i]);
+        }
+    }
+    let j = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (revStr[i] === undefined) {
+            revStr[i] = vowels[vowels.length - 1 - j];
+            j++;
+        }
+    }
+    revStr = revStr.join("");
+    return revStr;
+    
+}
+console.log(reverseVowelsOnly("leetcode"));
+
+
+function isVowel(str) {
+    if (str === "A" || str === "E" || str === "I" || str === "O" || str === "U" ||
+        str === "a" || str === "e" || str === "i" || str === "o" || str === "u") {
+        return true;
+    }
+    return false;
+}
+
